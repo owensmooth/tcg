@@ -1,0 +1,19 @@
+{
+  "name": "tcg",
+  "version": "1.0.0",
+  "description": "A Pokemon TCG card browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/onsmooth/tcg.git"
+  },
+  "author": "Owen Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onsmooth/tcg/issues"
+  },
+  "homepage": "https://github.com/onsmooth/tcg#readme"
+}
