@@ -27,7 +27,7 @@
                <tr>
                  <td><%= card.nationalPokedexNumber %></td>
                  <td><%= card.name %></td>
-                 <td><%= card.set %></td>
+                 <td data-set="<%= card.setCode %>"><%= card.set %></td>
                </tr>
                <% }) %>
              </tbody>
@@ -36,5 +36,7 @@
        <footer class="app-footer">
        </footer>
      </div>
+     <script src="assets/js/card-browser.js">
+     </script>
   </body>
 </html>
