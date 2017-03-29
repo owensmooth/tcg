@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const request = require('superagent');
+const db = require('./app/models');
 
 app.use('/assets', express.static('app/assets'));
 app.set('view engine', 'ejs');
@@ -9,6 +10,19 @@ app.set('views', 'app/templates');
 app.get('/browser', (req, res) => {
   res.render('layout', {
     title: 'TCG Browser'
+  });
+});
+
+app.get('/api/cards', (req, res) => {
+  db.card.findAll().then(cards => {
+    const cardData = cards.map(card => {
+      return {
+        card_id: card.card_id,
+        name: card.name
+      };
+    });
+
+    res.send(cardData);
   });
 });
 
