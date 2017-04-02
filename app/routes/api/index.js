@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../../models');
 
-router.get('cards', (req, res) => {
+router.get('/cards', (req, res) => {
   db.card.findAll().then(cards => {
     const cardData = cards.map(card => {
       return {
